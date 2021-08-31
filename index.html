@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>OnSign TV</title>
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <style>
+    
+    </style>
+    <body>
+        <header>
+            <h1 class="pull-left">OnSign TV Temperature App</h1>
+        </header>
+        <section class="container p-l-0 p-r-0">
+            <div class="border">
+                <div class="title">
+                    <h5>Tell us where you are</h5>
+                </div>
+                <form onsubmit="event.preventDefault(); getCoords()">
+                    <div class="form-row j-c-center">
+                        <div class="form-group col-md-4">
+                            <label for="city">City <span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="city" name="city">
+                        </div>
+                        <div class="form-group col-md-2">                        
+                            <label for="number">Number</label>
+                            <input class="form-control" type="number" id="number" name="number">
+                        </div>
+                        <div class="form-group col-xs-3">
+                            <label for="state">State (Initials only)<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="state" name="state">                       
+                        </div>
+                    </div>
+                    <div class="form-row j-c-center">
+                        <div class="form-group col-md-4">
+                            <label for="street">Street</label>
+                            <input class="form-control" type="text" id="street" name="street">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="form-check">&nbsp;</label>
+                             <button type="submit" class="btn btn-primary align-bottom" onclick="getCoords()">Show Temperature</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <br>
+        <section class="container p-l-0 p-r-0">
+            <div class="border">
+                <div class="title">
+                    <h5>Current Temperature for Location</h5>
+                </div>
+                    <div class="form-row  j-c-center">
+                        <div class="form-group col-md-4">
+                            <label for="latitude">Latitude</label>
+                            <input id="latitude" type="text"  class="form-control" readonly="">
+                        </div>
+                        <div class="form-group col-md-4">                        
+                            <label for="longitude">Longitude</label>
+                            <input class="form-control" type="longitude" id="longitude" name="longitude" readonly="">
+                        </div>
+                    <small>*Latitude and Longitude will be calculated according to the address provided</small>
+                    <br>
+                    </div>
+                <div class="show-location separator-up"></div>
+            </div>
+    	</section>
+ 
+    </body>
+    <script src="./assets/js/main.js"></script>
+</html>

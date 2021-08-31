@@ -1,0 +1,1 @@
+To run the project just go to the project's directory in your terminal and run: `npm run dev` which will simply serve the assets using node's http-server.
